@@ -5,8 +5,10 @@
 }
 
 body {
-    background-color: #222;
     color: white;
+    height: calc(100vh - 2rem);
+    background-image: url(../img/JavaScript-Framework.webp);
+    background-size: cover;
 }
 
 .container {
