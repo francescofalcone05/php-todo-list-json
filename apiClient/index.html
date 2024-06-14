@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Php Todo List Json</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"></script>
@@ -17,13 +17,22 @@
         <div class="container">
 
             <h1>{{ message }}</h1>
+            <ul>
+                <li v-for="task, i in toDoList" :class="(task.status==false) ? '' : 'lThrough'"
+                    @click="changeStatus(i)">{{ task.description }}
+                </li>
+            </ul>
+
+            <input class="my-p" type=" text" v-model="newTask" placeholder="inserisci nuova task">
+            <button class="my-p" @click="addTask()">Aggiungi</button>
 
         </div>
 
 
 
     </div>
-    <script src="./js/main.js"></script>
+    <script src=" ../js/main.js">
+    </script>
 
 
 </body>

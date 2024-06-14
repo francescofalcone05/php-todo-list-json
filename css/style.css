@@ -10,7 +10,27 @@ body {
 }
 
 .container {
-    width: 70%;
+    width: 16%;
     margin: 2rem auto;
     text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+
+li {
+    margin-bottom: 0.5rem;
+    list-style-type: none;
+    border: white 1px solid;
+    padding: 0.2rem 0;
+}
+
+.lThrough {
+    text-decoration: line-through
+}
+
+.my-p {
+    padding: 0.2rem 0.3rem;
 }
