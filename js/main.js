@@ -23,7 +23,7 @@ createApp({
         }
     },
     mounted() {
-        axios.get('../server.php').then((response) => {
+        axios.get('../list.php').then((response) => {
             this.toDoList = response.data;
         });
 
