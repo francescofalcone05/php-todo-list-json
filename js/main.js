@@ -25,15 +25,16 @@ createApp({
 
             axios.post('../list.php', newObject, this.postRequestConfig).then(results => {
                 console.log("Risultati: ", results.data);
-                let i = 0
-                let risultato = results.data
-                while (i < risultato.length) {
-                    if (risultato[i].status == "true") {
-                        risultato[i].status = true
-                    }
-                    i++
-                }
-                this.toDoList = risultato;
+                this.toDoList = results.data;
+                // let i = 0
+                // let risultato = results.data
+                // while (i < risultato.length) {
+                //     if (risultato[i].status == "true") {
+                //         risultato[i].status = true
+                //     }
+                //     i++
+                // }
+                // this.toDoList = risultato;
             });
 
         }

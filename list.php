@@ -12,7 +12,7 @@ if (isset($_POST["description"]) && isset($_POST["status"])) {
     //creo un nuovo oggetto con i dati dell'input
     $newObject = [
         "description" => $_POST["description"],
-        "status" => $_POST["status"]
+        "status" => filter_var($_POST["status"], FILTER_VALIDATE_BOOLEAN)
     ];
 
     //lo pusho dentro l'array preso dal json
